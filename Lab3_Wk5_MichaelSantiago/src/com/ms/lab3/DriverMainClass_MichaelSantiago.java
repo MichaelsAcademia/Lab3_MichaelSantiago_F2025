@@ -50,10 +50,42 @@ public class DriverMainClass_MichaelSantiago {
 			}
 		}
 		
-		System.out.println("ACCOUNTS CREATED");
+		// Close Scanner
+		sc.close();
+		
+		System.out.println("Starting run tests");
+		
+		// Run 1
+		System.out.println("Run 1");
 		
 		// Make a bank account with initial 1500
-		BankAccount_MS account = new BankAccount_MS(3000, 1500);
+		BankAccount_MS acc1 = new BankAccount_MS(3000, 1500);
+		System.out.println("Created bank account with 1500 balance");
+		
+		// Deposit 1500
+		System.out.println("Depositing 1500");
+		
+		acc1.deposit(1500);
+		
+		System.out.printf("New balance after deposit - %.2f\n", acc1.getBalance());
+		
+		// Run 2
+		System.out.println("Run 2");
+		
+		// Withdraw 600
+		System.out.println("Withdrawing 600");
+		
+		acc1.withdraw(600);
+		
+		System.out.printf("New balance after Withdraw - %.2f\n", acc1.getBalance());
+		
+		// Run 3
+		System.out.println("Starting Run 3");
+		
+		// Withdraw 2500
+		System.out.println("Attempting to withdraw 2500 from account");
+		
+		acc1.withdraw(2500);
 	}
 
 }
